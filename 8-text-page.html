@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мега Цвет</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link media="all" rel="stylesheet" href="styles/main.css">
+  <style>
+    /*Modal*/
+    .modal-dialog {
+      width: 750px;
+    }
+    .modal-content.cta-block.cta-b_light-colors {
+      border: none;
+      border-radius: 0;
+      padding: 5px 75px 20px 75px;
+      margin: 0 auto;
+    }
+    .modal-content.cta-block.cta-b_light-colors input[type="text"] {
+      width: 68%;
+    }
+    .modal-content.cta-block.cta-b_light-colors .callback-form {
+      margin-top: 35px;
+    }
+    .modal-content.cta-block.cta-b_light-colors button.close {
+      position: absolute;
+      right: -68px;
+      top: -5px;
+      color: #3abec0;
+      opacity: 1;
+    }
+    .modal-content.cta-block.cta-b_light-colors button.close:hover {
+      opacity: 0.7;
+    }
+    .modal-content.cta-block.cta-b_light-colors button.close:focus {
+      outline: none;
+    }
+    @media (max-width: 767px) { 
+      .modal-dialog {
+        width: 95%;
+      }
+      .modal-content.cta-block.cta-b_light-colors {
+        padding: 5px 15px 20px  15px;
+      }
+      .modal-content.cta-block.cta-b_light-colors img {
+        float: left;
+      }
+      .modal-content.cta-block.cta-b_light-colors .callback-form {
+        float: none;
+      }
+      .modal-content.cta-block.cta-b_light-colors input[type="text"] {
+        width: 100%;
+      }
+      .modal-content.cta-block.cta-b_light-colors button.close {
+        top: 0;
+        right: 0;
+      }
+    }
+  </style>
+</head>
+<body class="common-home">
+<div class="container">
+	<nav id="top">
+	    <div class="col-lg-4 col-md-4">
+	   		<ul class="list-inline profile-nav">
+		        <li class="dropdown">
+		        	<a id="dLabel" data-target="#" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<img src="img/user.png">
+				        <span class="hidden-xs hidden-sm hidden-md">Личный кабинет
+							<span class="caret"></span>
+						</span>
+		        	</a>
+		            <ul class="dropdown-menu" aria-labelledby="dLabel">
+					    <li><a href="#">Вход</a></li>
+					    <li><a href="#">Регистрация</a></li>
+					</ul>
+		        </li>
+		        <li>
+			        <a href="" id="wishlist-total" class="wishlist-total" title="">
+			        	<i class="fa fa-heart-o"></i> 
+			        	<span class="hidden-xs hidden-sm hidden-md">Избранное</span>
+		        	</a>
+		        </li>
+			</ul>
+	    </div>
+      <nav class="static-nav_collapse col-md-8">
+        <div class="navbar-header">
+          <span id="static-nav" class="visible-xs"></span>
+          <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+	      <div id="top-links" class="collapse navbar-collapse navbar-ex2-collapse nav">
+  	      <ul class="list-inline static-nav">
+  	        <li><a href="">Доставка</a></li>
+  	        <li><a href="">Оплата</a></li>
+  	        <li><a href="">Оптовикам</a></li>
+  	        <li><a href="">О нас</a></li>
+  	        <li><a href="">Блог</a></li>
+  	        <li><a href="">Отзывы</a></li>
+  	        <li><a href="">Контакты</a></li>     
+  	      </ul>
+	    </div>
+	</nav>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <div id="logo">
+            <a href=""><img src="img/logo-header.png" class="img-responsive" /></a>
+        </div>
+        </div>
+        <div class="col-md-3 col-md-offset-2 col-sm-4 phone-numbers_block">
+			<p>Мы на связи 24 часа в сутки</p>
+			<p class="phone-number">8-800-500-24-22
+			<br />
+			8-800-500-24-22</p>
+			<button class="callback-btn default-btn" data-toggle="modal" data-target="#callback-modal">Обратный звонок</button>
+        </div>
+        <div class="col-md-3 col-sm-4">
+        	<div id="cart">
+        		<div class="cart-block dropdown-toggle" data-toggle="dropdown" data-loading-text="Пожалуйста, подождите" aria-expanded="true"> 
+        			<img src="img/cart.png">
+        			<p class="cart-title">Корзина</p>
+        			<span>В корзине 1 товар</span>
+        			<br />
+        			<span>На сумму 103888 р</span>
+        		</div>
+  				<ul class="dropdown-menu pull-right">
+        			<li>
+      					<p class="text-center">Ваша корзина пуста!</p>
+   					</li>
+      			</ul>
+        	</div>
+	      	<div id="search" class="input-group">
+			    <input type="text" name="search" value="" placeholder="" class="form-control input-lg" />
+			    <span class="input-group-btn">
+			    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+			  </span>
+			</div>
+	    </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <nav id="menu">
+  	<div class="navbar-header"><span id="category" class="visible-xs"></span>
+      	<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Каталог букетов</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                <ul class="list-unstyled">
+                    <li><a href="">Букеты</a></li>
+                    <li><a href="">Свадебная тематика</a></li>
+                    <li><a href="">Цветы в шляпной коробке</a></li>
+                    <li><a href="">Композиции из цветов</a></li>
+                    <li><a href="">Цветочные корзины</a></li>
+                    <li><a href="">Цветы к праздникам</a></li>
+                </ul>
+            </div>
+          </div>  
+        </li>
+        <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Подарки</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                <ul class="list-unstyled">
+                    <li><a href="">yyyyyy</a></li>
+                </ul>
+            </div>
+		  </div>	
+        </li>
+        <li><a href="">Оформление мероприятий</a></li>
+        <li><a href="">Акции</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+	<div class="container">
+		<ol class="breadcrumb-b">
+			<li><a href="">Главная страница</a></li>
+			<li>Оптовикам</li>
+		</ol>
+		<div class="row">
+			<div id="content" class="col-sm-12">
+				<div class="row container">
+					<div class="article">
+						<h1>Заголовок H1 на этой странице</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim libero sed dui malesuada, ut commodo libero faucibus. Cras lorem lectus, elementum eget commodo ut, congue eget elit. Integer nec lorem lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque et ante sem. In rutrum luctus sollicitudin. Sed in convallis augue, at hendrerit est. Aliquam varius porta massa, at efficitur erat vulputate non. Fusce facilisis diam tortor, non vehicula lorem bibendum nec. Maecenas venenatis, est ut porttitor blandit, ipsum felis tristique mi, ac elementum tortor odio ut ligula. Nunc nisl sapien, tristique hendrerit sapien id, facilisis condimentum est. Quisque sed tortor eu est suscipit congue. Suspendisse potenti.</p>
+						<p>Etiam pharetra risus libero, eget cursus nibh tempus a. Phasellus libero ligula, iaculis non nisi non, posuere imperdiet sapien. Sed ultrices vulputate ligula ut ultricies. Aliquam pretium commodo eros, ut accumsan lorem faucibus eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus facilisis velit in tellus aliquet, at blandit turpis fermentum. Suspendisse suscipit sapien id orci tristique, vel faucibus magna bibendum. Donec blandit arcu ut velit imperdiet, at euismod turpis scelerisque. Nulla pretium at diam et laoreet.</p>
+						<h2>Заголовок H2 СЕО-статьи на странице</h2>
+						<img src="img/img03.jpg" style="float: left;">
+						<p>Praesent ut pellentesque turpis, vitae elementum magna. Mauris id purus tellus. Vivamus a blandit arcu. Sed dignissim magna at malesuada convallis. In velit felis, venenatis eu facilisis ut, lacinia a urna. Fusce egestas dui in bibendum lobortis. Praesent massa nulla, cursus at risus id, finibus lobortis justo. Mauris non nisi a quam mollis cursus nec eu diam. Ut rhoncus augue id erat ultricies ullamcorper. Sed tincidunt nec ante vitae lacinia. Pellentesque eu elementum arcu, vitae tristique dolor. Fusce massa leo, laoreet vitae sapien eu, dignissim consequat massa. In accumsan nisl ut ipsum condimentum, nec consectetur ante hendrerit.</p>
+						<p>Pellentesque feugiat mattis est ac mollis. Nulla at convallis quam. Nunc eleifend ante enim, ut rutrum lacus bibendum ac. Nulla massa diam, pretium nec vehicula sit amet, elementum vitae ex. Aenean a mollis metus, quis molestie arcu. Quisque suscipit sit amet tortor sit amet imperdiet. Sed in fringilla elit. Duis blandit sapien id odio tempor, id congue tortor volutpat.</p>
+						<h3>Заголовок H3</h3>
+						<p>Donec egestas enim a velit efficitur scelerisque. Nullam quis libero pretium, fermentum mauris in, imperdiet lorem. Duis tempor leo non lobortis consectetur. Fusce posuere leo ac est imperdiet, ac ultricies mauris gravida. Aliquam augue nunc, accumsan vitae ligula nec, imperdiet interdum tellus. Phasellus aliquet, nibh at molestie consectetur, nibh dui facilisis risus, id eleifend ligula velit id est. Maecenas placerat ornare nunc, et dictum eros iaculis sit amet. Curabitur aliquam aliquet ante. Ut diam arcu, ultricies a ex ac, tincidunt laoreet eros.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="cta-block col-md-10 col-md-offset-1">
+						<div class="row">
+							<div class="col-md-6">
+								<img src="img/callback.png">
+								<p class="italic-text">У вас есть к нам вопросы?</p>
+								<p>Оставьте ваш номер телефона и наш  операторы свяжется с вами в течении 10 минут</p>
+							</div>
+							<div class="col-md-6">
+								<form name="callback-form" class="callback-form" action="" method="">
+									<input type="text" name="phone-number" placeholder="Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+									<input type="submit" value="Отправить">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="categories-blocks">
+					<div class="row1">
+						<a href="" class="category-block" style="background-image: url(img/category-bg01.jpg);">
+							<p class="italic-text">Букеты</p>
+						</a>
+						<a href="" class="category-block" style="background-image: url(img/category-bg02.jpg);">
+							<p class="italic-text">Цветы в шляпной коробке</p>
+						</a>
+						<a href="" class="category-block" style="background-image: url(img/category-bg03.jpg);">
+							<p class="italic-text">Цветочные корзины</p>
+						</a>
+						<a href="" class="category-block" style="background-image: url(img/category-bg04.jpg);">
+							<p class="italic-text">Игрушки</p>
+						</a>
+					</div>
+					<div class="row2">
+						<a href="" class="category-block" style="background-image: url(img/category-bg05.jpg);">
+							<p class="italic-text">Свадебная тематика</p>
+						</a>
+						<a href="" class="category-block" style="background-image: url(img/category-bg06.jpg);">
+							<p class="italic-text">Композиции из цветов</p>
+						</a>
+						<a href="" class="category-block" style="background-image: url(img/category-bg07.jpg);">
+							<p class="italic-text">Цветы к праздникам</p>
+						</a>
+						<a href="" class="category-block" style="background-image: url(img/category-bg08.jpg);">
+							<p class="italic-text">Конфеты</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content cta-block cta-b_light-colors">
+		        <div class="modal-body">
+		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <img src="img/callback-light.png">
+					<p class="italic-text">Заявка на обратный звонок</p>
+					<p>Оставьте ваш номер телефона и наш  оператор свяжется с вами в течении 10 минут</p>
+					<form name="callback-form" class="callback-form" action="" method="">
+						<input type="text" name="phone-number" placeholder="Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+						<input type="submit" value="Отправить">
+					</form>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+		<div class="container">
+		    <div class="row">
+		    	<div class="col-lg-3 col-lg-offset-1 col-md-4">
+					<p class="italic-text">Подпишитесь на e-mail рассылку</p>
+		    	</div>
+		    	<div class="col-md-8">
+		    		<form name="email-form" class="email-form" action="" method="">
+		    			<input name="email" type="email" placeholder="Ваш e-mail" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
+		    			<input class="blue-border-btn" type="submit">
+		    		</form>
+		    	</div>
+		    </div>
+		    <hr />
+		    <div class="row">
+		    	<div class="col-md-2 footer-logo_block">
+			    	<div class="footer-logo">
+			            <a href=""><img src="img/logo-footer.png" class="img-responsive" /></a>
+			        </div>
+		    		<p>Доставка цветов и подарков по Москве</p>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<h5>Контактная информация</h5>
+		    		<p class="tel-number">
+			    		8-800-500-24-22
+						<br />
+						8-800-500-24-22</p>
+					<p>
+						email@mail.ru
+						<br />
+						<span class="adress">г. Москва  Велозаводская д.13 стр.1</span>	
+					</p>
+					<button class="callback-btn default-btn" data-toggle="modal" data-target="#callback-modal">Обратный звонок</button>
+		    	</div>
+			    <div class="col-md-3 col-xs-6">
+			        <h5>Продукция</h5>
+			        <ul class="list-unstyled">
+			          <li><a href="">ффффф</a></li>
+			          <li><a href="">ффффф</a></li>
+			          <li><a href="">ффффф</a></li>
+			        </ul>
+		      	</div>
+		      	<div class="col-md-2 col-xs-6">
+		      		<h5>Информация</h5>
+			        <ul class="list-unstyled">
+			          <li><a href="">ккккк</a></li>
+			          <li><a href="">ккккк</a></li>
+			          <li><a href="">ккккк</a></li>
+			        </ul>
+		      	</div>
+		      	<div class="col-md-2 copyright">
+		      		<p>Магазин цветов Мегацвет &copy; 2010-2016. <br /> Все права защищены</p>
+		      		<p>Разработка и продвижение <a href="">Snegiri Media</a> - <a href="">Adlers</a></p>
+		      	</div>
+		    </div>
+	    </div>
+	</footer>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мега Цвет</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link media="all" rel="stylesheet" href="styles/main.css">
+  <style>
+    /*Modal*/
+    .modal-dialog {
+      width: 750px;
+    }
+    .modal-content.cta-block.cta-b_light-colors {
+      border: none;
+      border-radius: 0;
+      padding: 5px 75px 20px 75px;
+      margin: 0 auto;
+    }
+    .modal-content.cta-block.cta-b_light-colors input[type="text"] {
+      width: 68%;
+    }
+    .modal-content.cta-block.cta-b_light-colors .callback-form {
+      margin-top: 35px;
+    }
+    .modal-content.cta-block.cta-b_light-colors button.close {
+      position: absolute;
+      right: -68px;
+      top: -5px;
+      color: #3abec0;
+      opacity: 1;
+    }
+    .modal-content.cta-block.cta-b_light-colors button.close:hover {
+      opacity: 0.7;
+    }
+    .modal-content.cta-block.cta-b_light-colors button.close:focus {
+      outline: none;
+    }
+    @media (max-width: 767px) { 
+      .modal-dialog {
+        width: 95%;
+      }
+      .modal-content.cta-block.cta-b_light-colors {
+        padding: 5px 15px 20px  15px;
+      }
+      .modal-content.cta-block.cta-b_light-colors img {
+        float: left;
+      }
+      .modal-content.cta-block.cta-b_light-colors .callback-form {
+        float: none;
+      }
+      .modal-content.cta-block.cta-b_light-colors input[type="text"] {
+        width: 100%;
+      }
+      .modal-content.cta-block.cta-b_light-colors button.close {
+        top: 0;
+        right: 0;
+      }
+    }
+  </style>
+</head>
+<body class="common-home">
+<div class="container">
+	<nav id="top">
+	    <div class="col-lg-4 col-md-4">
+	   		<ul class="list-inline profile-nav">
+		        <li class="dropdown">
+		        	<a id="dLabel" data-target="#" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<img src="img/user.png">
+				        <span class="hidden-xs hidden-sm hidden-md">Личный кабинет
+							<span class="caret"></span>
+						</span>
+		        	</a>
+		            <ul class="dropdown-menu" aria-labelledby="dLabel">
+					    <li><a href="#">Вход</a></li>
+					    <li><a href="#">Регистрация</a></li>
+					</ul>
+		        </li>
+		        <li>
+			        <a href="" id="wishlist-total" class="wishlist-total" title="">
+			        	<i class="fa fa-heart-o"></i> 
+			        	<span class="hidden-xs hidden-sm hidden-md">Избранное</span>
+		        	</a>
+		        </li>
+			</ul>
+	    </div>
+      <nav class="static-nav_collapse col-md-8">
+        <div class="navbar-header">
+          <span id="static-nav" class="visible-xs"></span>
+          <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+	      <div id="top-links" class="collapse navbar-collapse navbar-ex2-collapse nav">
+  	      <ul class="list-inline static-nav">
+  	        <li><a href="">Доставка</a></li>
+  	        <li><a href="">Оплата</a></li>
+  	        <li><a href="">Оптовикам</a></li>
+  	        <li><a href="">О нас</a></li>
+  	        <li><a href="">Блог</a></li>
+  	        <li><a href="">Отзывы</a></li>
+  	        <li><a href="">Контакты</a></li>     
+  	      </ul>
+	    </div>
+	</nav>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <div id="logo">
+            <a href=""><img src="img/logo-header.png" class="img-responsive" /></a>
+        </div>
+        </div>
+        <div class="col-md-3 col-md-offset-2 col-sm-4 phone-numbers_block">
+			<p>Мы на связи 24 часа в сутки</p>
+			<p class="phone-number">8-800-500-24-22
+			<br />
+			8-800-500-24-22</p>
+			<button class="callback-btn default-btn" data-toggle="modal" data-target="#callback-modal">Обратный звонок</button>
+        </div>
+        <div class="col-md-3 col-sm-4">
+        	<div id="cart">
+        		<div class="cart-block dropdown-toggle" data-toggle="dropdown" data-loading-text="Пожалуйста, подождите" aria-expanded="true"> 
+        			<img src="img/cart.png">
+        			<p class="cart-title">Корзина</p>
+        			<span>В корзине 1 товар</span>
+        			<br />
+        			<span>На сумму 103888 р</span>
+        		</div>
+  				<ul class="dropdown-menu pull-right">
+        			<li>
+      					<p class="text-center">Ваша корзина пуста!</p>
+   					</li>
+      			</ul>
+        	</div>
+	      	<div id="search" class="input-group">
+			    <input type="text" name="search" value="" placeholder="" class="form-control input-lg" />
+			    <span class="input-group-btn">
+			    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+			  </span>
+			</div>
+	    </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <nav id="menu">
+  	<div class="navbar-header"><span id="category" class="visible-xs"></span>
+      	<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Каталог букетов</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                <ul class="list-unstyled">
+                    <li><a href="">Букеты</a></li>
+                    <li><a href="">Свадебная тематика</a></li>
+                    <li><a href="">Цветы в шляпной коробке</a></li>
+                    <li><a href="">Композиции из цветов</a></li>
+                    <li><a href="">Цветочные корзины</a></li>
+                    <li><a href="">Цветы к праздникам</a></li>
+                </ul>
+            </div>
+          </div>  
+        </li>
+        <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Подарки</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                <ul class="list-unstyled">
+                    <li><a href="">yyyyyy</a></li>
+                </ul>
+            </div>
+		  </div>	
+        </li>
+        <li><a href="">Оформление мероприятий</a></li>
+        <li><a href="">Акции</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+	<div class="container">
+		<ol class="breadcrumb-b">
+			<li><a href="">Главная страница</a></li>
+			<li>Контакты</li>
+		</ol>
+		<div class="row">
+			<div id="content" class="col-sm-12">
+				<div class="row container contacts">
+					<div class="map">
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=I_JajV82Rtj-Ungf7_1ByKPFmyliKsUT&amp;width=1140&amp;height=330&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+					</div>
+					<h1>Контактная информация</h1>
+					<div class="col-md-4 contact-info">
+						<p class="pink-text">Телефоны:</p>
+						<div class="contacts-phone-numbers">
+							<p>8-(800)500-24-22</p>
+							<p>8-(499)764-19-21</p>
+							<p>8-(967)180-88-34</p>
+						</div>
+						<p>Мы принимаем заказы по телефону круглосуточно, без выходных.</p>
+						<p>Вы можете так же заказать обратный звонок:</p>
+						<button class="blue-border-btn">Обратный звонок</button>
+					</div>
+					<div class="col-md-7 col-md-offset-1 contact-info-right">
+						<p><span class="pink-text">Название компании:</span>ООО "МЕГА ПЛЮС"</p>
+						<p><span class="pink-text">ИНН/КПП:ИНН/КПП:</span>7713401336/771301001</p>
+						<br />
+						<p><span class="pink-text">Юридический адрес:</span>127644, г.Москва, ул.Лобненская, д.12, к.2, комн.6</p>
+						<p><span class="pink-text">Фактический адрес:</span>г.Москва, м.Автозаводская, ул.Велозаводская д.13, стр.1</p>
+						<br />
+						<p><span class="pink-text">e-mail:</span>megacvet2414@mail.ru</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content cta-block cta-b_light-colors">
+		        <div class="modal-body">
+		        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <img src="img/callback-light.png">
+					<p class="italic-text">Заявка на обратный звонок</p>
+					<p>Оставьте ваш номер телефона и наш  оператор свяжется с вами в течении 10 минут</p>
+					<form name="callback-form" class="callback-form" action="" method="">
+						<input type="text" name="phone-number" placeholder="Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+						<input type="submit" value="Отправить">
+					</form>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+		<div class="container">
+		    <div class="row">
+		    	<div class="col-lg-3 col-lg-offset-1 col-md-4">
+					<p class="italic-text">Подпишитесь на e-mail рассылку</p>
+		    	</div>
+		    	<div class="col-md-8">
+		    		<form name="email-form" class="email-form" action="" method="">
+		    			<input name="email" type="email" placeholder="Ваш e-mail" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
+		    			<input class="blue-border-btn" type="submit">
+		    		</form>
+		    	</div>
+		    </div>
+		    <hr />
+		    <div class="row">
+		    	<div class="col-md-2 footer-logo_block">
+			    	<div class="footer-logo">
+			            <a href=""><img src="img/logo-footer.png" class="img-responsive" /></a>
+			        </div>
+		    		<p>Доставка цветов и подарков по Москве</p>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<h5>Контактная информация</h5>
+		    		<p class="tel-number">
+			    		8-800-500-24-22
+						<br />
+						8-800-500-24-22</p>
+					<p>
+						email@mail.ru
+						<br />
+						<span class="adress">г. Москва  Велозаводская д.13 стр.1</span>	
+					</p>
+					<button class="callback-btn default-btn" data-toggle="modal" data-target="#callback-modal">Обратный звонок</button>
+		    	</div>
+			    <div class="col-md-3 col-xs-6">
+			        <h5>Продукция</h5>
+			        <ul class="list-unstyled">
+			          <li><a href="">ффффф</a></li>
+			          <li><a href="">ффффф</a></li>
+			          <li><a href="">ффффф</a></li>
+			        </ul>
+		      	</div>
+		      	<div class="col-md-2 col-xs-6">
+		      		<h5>Информация</h5>
+			        <ul class="list-unstyled">
+			          <li><a href="">ккккк</a></li>
+			          <li><a href="">ккккк</a></li>
+			          <li><a href="">ккккк</a></li>
+			        </ul>
+		      	</div>
+		      	<div class="col-md-2 copyright">
+		      		<p>Магазин цветов Мегацвет &copy; 2010-2016. <br /> Все права защищены</p>
+		      		<p>Разработка и продвижение <a href="">Snegiri Media</a> - <a href="">Adlers</a></p>
+		      	</div>
+		    </div>
+	    </div>
+	</footer>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
